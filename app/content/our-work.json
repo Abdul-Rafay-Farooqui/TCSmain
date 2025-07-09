@@ -1,0 +1,34 @@
+{
+  "caseStudies": [
+    {
+      "image": "/image/work-1.png",
+      "text": "Lorem ipsum dolor sit amet 1",
+      "slug": "lorem-ipsum-dolor-sit-amet"
+    },
+    {
+      "image": "/image/work-2.png",
+      "text": "Lorem ipsum dolor sit amet 2",
+      "slug": "lorem-ipsum-dolor-sit-amet-2"
+    },
+    {
+      "image": "/image/work-3.png",
+      "text": "Lorem ipsum dolor sit amet 3",
+      "slug": "lorem-ipsum-dolor-sit-amet-3"
+    },
+    {
+      "image": "/image/work-1.png",
+      "text": "Lorem ipsum dolor sit amet 4",
+      "slug": "lorem-ipsum-dolor-sit-amet-4"
+    },
+    {
+      "image": "/image/work-2.png",
+      "text": "Lorem ipsum dolor sit amet 5",
+      "slug": "lorem-ipsum-dolor-sit-amet-5"
+    }
+  ],
+  "globals": {
+    "downwards_right_arrow_black": "/image/icon/arrow_downards_right_black.png",
+    "downwards_right_arrow_banana": "/image/icon/arrow_downards_right_banana.png",
+    "dropdown": "/image/icon/DropDown.png"
+  }
+}

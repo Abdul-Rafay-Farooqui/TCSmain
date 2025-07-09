@@ -1,0 +1,63 @@
+{
+  "globals": {
+    "logo2": "/image/TCSLogoBlack.png",
+    "button_icon": "/image/icon/arrow_forward.png",
+    "foward_icon_white": "/image/icon/arrow_forward_white.png",
+    "foward_icon_banana": "/image/icon/arrow_forward_banana.png",
+    "downwards_right_arrow_black": "/image/icon/arrow_downards_right_black.png",
+    "downwards_right_arrow_banana": "/image/icon/arrow_downards_right_banana.png"
+  },
+  "mainText1": "Services designed to grow ",
+  "mainText2": "your business",
+  "mainTextIcon": "/image/monkey.png",
+  "services": [
+    {
+      "background": "black",
+      "image": "/image/services-1.png",
+      "title": "Immersive 3d designs",
+      "description": "From modeling and animation to simulations and motion graphics, our comprehensive 3D services bring concepts to life with precision and creativity, enhancing visual communication across industries.",
+      "simplyPut1": ["3D Modeling", "Texturing & Rendering", "Animation"],
+      "simplyPut2": [
+        "Product Visualization",
+        "Character Design & Animation",
+        "Motion Graphics"
+      ]
+    },
+    {
+      "background": "white",
+      "image": "/image/services-2.png",
+      "title": "Immerse 3d designs",
+      "description": "From modeling and animation to simulations and motion graphics, our comprehensive 3D services bring concepts to life with precision and creativity, enhancing visual communication across industries.",
+      "simplyPut1": ["3D Modeling", "Texturing & Rendering", "Animation"],
+      "simplyPut2": [
+        "Product Visualization",
+        "Character Design & Animation",
+        "Motion Graphics"
+      ]
+    },
+    {
+      "background": "black",
+      "image": "/image/services-3.png",
+      "title": "Immerse 3d designs",
+      "description": "From modeling and animation to simulations and motion graphics, our comprehensive 3D services bring concepts to life with precision and creativity, enhancing visual communication across industries.",
+      "simplyPut1": ["3D Modeling", "Texturing & Rendering", "Animation"],
+      "simplyPut2": [
+        "Product Visualization",
+        "Character Design & Animation",
+        "Motion Graphics"
+      ]
+    },
+    {
+      "background": "banana",
+      "image": "/image/services-4.png",
+      "title": "Immerse 3d designs",
+      "description": "From modeling and animation to simulations and motion graphics, our comprehensive 3D services bring concepts to life with precision and creativity, enhancing visual communication across industries.",
+      "simplyPut1": ["3D Modeling", "Texturing & Rendering", "Animation"],
+      "simplyPut2": [
+        "Product Visualization",
+        "Character Design & Animation",
+        "Motion Graphics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "globals": {
+    "logo2": "/image/TCSLogoBlack.png",
+    "button_icon": "/image/icon/arrow_forward.png",
+    "foward_icon_white": "/image/icon/arrow_forward_white.png",
+    "foward_icon_banana": "/image/icon/arrow_forward_banana.png",
+    "downwards_right_arrow_black": "/image/icon/arrow_downards_right_black.png",
+    "downwards_right_arrow_banana": "/image/icon/arrow_downards_right_banana.png"
+  },
+  "pageImage": "/image/whoweare.png",
+  "heading": "Hoo Hoo Who We Are",
+  "paragraph1": "Three Chimp Studios started when three designers, each with their own unique talents, decided that they wanted more than just the usual work grind. They wanted to create something special together.",
+  "paragraph2": "By combining their skills, they formed a creative led studio focused on innovative digital solutions and design services. With a shared passion, Three Chimp Studios was born.",
+  "monkey": "/image/monkey.png",
+  "tribe": [
+    {
+      "image": "/image/crew/MichelMatta.png",
+      "name": "Michel Matta",
+      "designation": "Co-founder / Design Director"
+    },
+    {
+      "image": "/image/crew/MarcKeyrouz.png",
+      "name": "Marc Keyrouz",
+      "designation": "Co-founder / Business Lead"
+    },
+    {
+      "image": "/image/crew/AndrewTokatly.png",
+      "name": "Andrew Tokatly",
+      "designation": "Co-founder / Creative Director"
+    }
+  ]
+}

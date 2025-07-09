@@ -1,0 +1,100 @@
+{
+  "globals": {
+    "logo2": "/image/TCSLogoBlack.png",
+    "button_icon": "/image/icon/arrow_forward.png",
+    "foward_icon_white": "/image/icon/arrow_forward_white.png",
+    "forward_icon_banana": "/image/icon/arrow_forward_banana.png",
+    "downwards_right_arrow_black": "/image/icon/arrow_downards_right_black.png",
+    "downwards_right_arrow_banana": "/image/icon/arrow_downards_right_banana.png"
+  },
+  "nav": {
+    "logo": "/image/TCSLogo.png",
+    "menu": "/image/Menu.png"
+  },
+  "banner": {
+    "title": "Wild Ideas, Wilder Designs!",
+    "subtitle": "A culture-driven, creative and digital shop built for the new mainstream",
+    "b_l_icon": "/image/Tag.png",
+    "b_c_icon": "/image/icon/arrow_downward.png"
+  },
+  "marquee": [
+    {
+      "text": "Transform",
+      "icon": "/image/icon/star.png"
+    },
+    {
+      "text": "Create",
+      "icon": "/image/icon/brackets.png"
+    },
+    {
+      "text": "Conquer",
+      "icon": "/image/icon/monkey.png"
+    }
+  ],
+  "service": {
+    "title": "Services Designed To Grow Your Business",
+    "services": [
+      {
+        "title": "Branding",
+        "slug": "#"
+      },
+      {
+        "title": "3D Animation",
+        "title2": "& Modeling",
+        "slug": "#"
+      },
+      {
+        "title": "Web Design",
+        "title2": "+ Development",
+        "slug": "#"
+      },
+      {
+        "title": "Creative Direction",
+        "slug": "#"
+      },
+      {
+        "title": "Design Solutions",
+        "slug": "#"
+      },
+      {
+        "title": "Branding",
+        "slug": "#"
+      }
+    ],
+    "b_image": "/image/cubes.png"
+  },
+  "ourwork": {
+    "image1": "/image/work-1.png",
+    "image1url": "#",
+    "image2": "/image/work-2.png",
+    "image2url": "#",
+    "image3": "/image/work-3.png",
+    "image3url": "#",
+    "image4": "/image/work-4.png",
+    "image4url": "#"
+  },
+  "footer": {
+    "quickLinks": [
+      {
+        "text": "Our Work",
+        "link": "/our-work"
+      },
+      {
+        "text": "Services",
+        "link": "/services"
+      },
+      {
+        "text": "About us",
+        "link": "/about-us"
+      }
+    ],
+    "footer_text": "We collaborate with brands and humans.",
+    "email": " info@threechimpstudios.com",
+    "insta": "/image/icon/Insta.png",
+    "instaLink": "https://www.instagram.com/threechimpstudios/profilecard/?igsh=MTJvMnNlbzZzMDI0ZA==",
+    "linkedin": "/image/icon/Linkedin.png",
+    "linkedinLink": "https://www.linkedin.com/company/threechimpstudios/",
+    "behance": "/image/icon/behance.png",
+    "behancelink": "https://www.behance.net/threechimp"
+  }
+}
