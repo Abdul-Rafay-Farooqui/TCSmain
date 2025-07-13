@@ -26,32 +26,41 @@ const Banner = ({ data }) => {
           autoPlay
           loop
           muted
+          playsInline
+          controls={false}
+          preload="auto"
           className={`r-transition z-30  absolute hover:scale-110 w-[60px] sm:w-[207px] right-[19%] sm:right-[35%] md:right-[39%] lg:right-[41%] 3xl:right-[44%] -top-[355px] sm:-top-[490px] lg:-top-[470px]`}
->
-            <source src="/image/KeyFrame.mov" type="video/quicktime" />
-            <source src="/image/KeyFrame.WEBM" type="video/webm" />
-</video>
+        >
+          <source src="/image/Keyframe.mov" type="video/quicktime" />
+          <source src="/image/Keyframe.webm" type="video/webm" />
+        </video>
       </div>
       <div className="relative ">
         <video
           autoPlay
           loop
           muted
+          playsInline
+          controls={false}
+          preload="auto"
           className={`r-transition absolute hover:scale-110 w-[90px] sm:w-[220px] md:w-[350px] 2xl:w-[374px] -left-[5%] sm:-left-[12%] lg:-left-5 xl:left-24 2xl:left-36 3xl:left-[13%] -top-[230px] sm:-top-[409px] md:-top-[450px] lg:-top-[295px]`}
         >
           <source src="/image/Star.mov" type="video/quicktime" />
-            <source src="/image/Star.WEBM" type="video/webm" />
+          <source src="/image/Star.webm" type="video/webm" />
         </video>
       </div>
       <div className="relative ">
-        <video  
+        <video
           autoPlay
           loop
           muted
+          playsInline
+          controls={false}
+          preload="auto"
           className={`r-transition brightness-90 absolute hover:scale-110 w-[110px] sm:w-[250px] md:w-[350px] lg:w-[450px] -right-[8%] sm:-right-[12%] lg:-right-[70px] xl:right-10 2xl:right-20 3xl:right-32 -top-[250px] sm:-top-[419px] md:-top-[470px] lg:-top-[325px]`}
         >
-          <source src="/image/Monkeyvid.mov" type="video/quicktime" />
-            <source src="/image/Monkeyvid.WEBM" type="video/webm" />
+          <source src="/image/Monkeyvid2.mov" type="video/quicktime" />
+          <source src="/image/Monkeyvid.webm" type="video/webm" />
         </video>
       </div>
       <div className="grid grid-cols-3 justify-between items-end">

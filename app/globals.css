@@ -14,6 +14,61 @@ body {
   cursor: none !important;
 }
 
+/* Hide video controls completely */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display {
+  display: none !important;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+}
+
+/* Firefox */
+video::-moz-media-controls {
+  display: none !important;
+}
+
+/* Ensure videos are pointer-events: none to prevent interaction */
+video {
+  pointer-events: none !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -54,26 +109,31 @@ body {
 }
 
 .marquee-carousel .carousel .slider-wrapper {
-  overflow: hidden; /* Hide any overflow to create a smooth scrolling effect */
+  overflow: hidden;
+  /* Hide any overflow to create a smooth scrolling effect */
 }
 
 .marquee-carousel .carousel .slide {
-  width: 100%; /* Ensure each slide takes up full width */
+  width: 100%;
+  /* Ensure each slide takes up full width */
 }
 
 /* Optional: Customize the appearance further */
 .marquee-carousel .carousel .slider {
-  display: flex; /* Keep slides in a row */
+  display: flex;
+  /* Keep slides in a row */
 }
 
 .marquee-carousel .carousel .slider-wrapper.axis-horizontal .slider {
-  animation: marquee-scroll 30s linear infinite; /* Infinite scrolling animation */
+  animation: marquee-scroll 30s linear infinite;
+  /* Infinite scrolling animation */
 }
 
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -142,6 +202,7 @@ body {
   mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
   -webkit-mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
 }
+
 .curveTopOurWork {
   position: absolute;
   transform: translateX(1px);
@@ -151,6 +212,7 @@ body {
   mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
   -webkit-mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
 }
+
 .curveBottomOurWork {
   position: absolute;
   transform: translateY(1px);
@@ -160,6 +222,7 @@ body {
   mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
   -webkit-mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
 }
+
 @media (min-width: 1700px) {
   .card-b-l-btn {
     position: relative;
@@ -172,6 +235,7 @@ body {
     border-top-left-radius: 50%;
     display: flex;
   }
+
   .curveTop {
     position: absolute;
     transform: translateX(2px);
@@ -181,6 +245,7 @@ body {
     mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
     -webkit-mask: radial-gradient(30px at 0 0, transparent 100%, black 100%);
   }
+
   .curveBottom {
     position: absolute;
     transform: translateY(2px);
@@ -200,6 +265,7 @@ body {
     mask: radial-gradient(20px at 0 0, transparent 100%, black 100%);
     -webkit-mask: radial-gradient(20px at 0 0, transparent 100%, black 100%);
   }
+
   .curveBottomOurWork {
     transform: translateY(-3px) translateX(32px);
     height: 20px;
@@ -208,17 +274,20 @@ body {
     -webkit-mask: radial-gradient(20px at 0 0, transparent 100%, black 100%);
   }
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 .spin {
-  animation: spin 2s linear infinite; /* 2 seconds, linear timing, infinite loop */
+  animation: spin 2s linear infinite;
+  /* 2 seconds, linear timing, infinite loop */
 }
 
 @media (max-width: 1024px) {
@@ -227,6 +296,7 @@ body {
     width: 38px;
     height: 100px;
   }
+
   .curveBottom {
     transform: translateY(9px) translateX(-30px);
     width: 100px;
@@ -243,28 +313,45 @@ body {
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Number of lines to show before truncating */
+  -webkit-line-clamp: 3;
+  /* Number of lines to show before truncating */
 }
 
 .case-study-content h3 {
-  font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
+  font-size: 1.125rem
+    /* 18px */
+  ;
+  line-height: 1.75rem
+    /* 28px */
+  ;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.025em;
 }
 
 .case-study-content h6 {
-  font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
+  font-size: 1.125rem
+    /* 18px */
+  ;
+  line-height: 1.75rem
+    /* 28px */
+  ;
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
 
 .case-study-content p {
-  font-size: 0.875rem /* 14px */;
-  line-height: 1.25rem /* 20px */;
-  margin-top: 2rem /* 24px */;
+  font-size: 0.875rem
+    /* 14px */
+  ;
+  line-height: 1.25rem
+    /* 20px */
+  ;
+  margin-top: 2rem
+    /* 24px */
+  ;
   line-height: 1.625;
-  margin-bottom: 2.5rem /* 40px */;
+  margin-bottom: 2.5rem
+    /* 40px */
+  ;
 }
