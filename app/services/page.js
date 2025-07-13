@@ -39,10 +39,15 @@ const Service = () => {
           autoPlay
           loop
           muted
+          playsInline
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
           className="size-full object-contain"
         >
           <source src="/image/Smonkey.mov" type="video/quicktime" />
-            <source src="/image/Smonkey.WEBM" type="video/webm" />
+          <source src="/image/Smonkey.webm" type="video/webm" />
         </video>
       </div>
     </div>

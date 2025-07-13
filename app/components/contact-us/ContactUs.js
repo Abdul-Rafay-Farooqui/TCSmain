@@ -69,10 +69,15 @@ const ContactUs = () => {
             autoPlay
             loop
             muted
+            playsInline
+            controls={false}
+            preload="auto"
+            webkit-playsinline="true"
+            x-webkit-airplay="allow"
             className="size-full object-contain mx-auto"
           >
             <source src="/image/Banana.mov" type="video/quicktime" />
-            <source src="/image/Banana.WEBM" type="video/webm" />
+            <source src="/image/Banana.webm" type="video/webm" />
           </video>
         </div>
         <div className="lg:max-w-[500px] ml-0 lg:ml-24 3xl:ml-32 text-center lg:text-left leading-tight lg:tracking-wide">
@@ -99,11 +104,16 @@ const ContactUs = () => {
             <video
               autoPlay
               loop
-              muted 
+              muted
+              playsInline
+              controls={false}
+              preload="auto"
+              webkit-playsinline="true"
+              x-webkit-airplay="allow"
               className="size-full object-contain mx-auto hidden lg:block"
             >
               <source src="/image/Banana.mov" type="video/quicktime" />
-            <source src="/image/Banana.WEBM" type="video/webm" />
+              <source src="/image/Banana.webm" type="video/webm" />
             </video>
           </div>
         </div>

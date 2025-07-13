@@ -1,8 +1,47 @@
 "use client";
+import { useEffect, useRef } from "react";
 import content from "@content/home.json";
 
 const Banner = ({ data }) => {
   const { b_l_icon, b_c_icon, monkey3d } = content.banner;
+  const videoRefs = useRef([]);
+
+  useEffect(() => {
+    // Force autoplay for Safari
+    const videos = videoRefs.current;
+    videos.forEach((video) => {
+      if (video) {
+        // Set muted and playsInline for Safari
+        video.muted = true;
+        video.playsInline = true;
+
+        // Try to play the video
+        const playPromise = video.play();
+
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              // Autoplay started successfully
+              console.log('Video autoplay started');
+            })
+            .catch((error) => {
+              // Autoplay was prevented, try again on user interaction
+              console.log('Autoplay prevented:', error);
+
+              const handleUserInteraction = () => {
+                video.play().catch(console.error);
+                document.removeEventListener('touchstart', handleUserInteraction);
+                document.removeEventListener('click', handleUserInteraction);
+              };
+
+              document.addEventListener('touchstart', handleUserInteraction);
+              document.addEventListener('click', handleUserInteraction);
+            });
+        }
+      }
+    });
+  }, []);
+
   return (
     <div className="bg-tcs-black rounded-[35px] p-4 h-[500px] sm:h-[820px] sm:p-10 pt-20 sm:pt-56 grid">
       <h1 className="text-center">
@@ -23,12 +62,15 @@ const Banner = ({ data }) => {
       </h1>
       <div className="relative ">
         <video
+          ref={(el) => (videoRefs.current[0] = el)}
           autoPlay
           loop
           muted
           playsInline
           controls={false}
           preload="auto"
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
           className={`r-transition z-30  absolute hover:scale-110 w-[60px] sm:w-[207px] right-[19%] sm:right-[35%] md:right-[39%] lg:right-[41%] 3xl:right-[44%] -top-[355px] sm:-top-[490px] lg:-top-[470px]`}
         >
           <source src="/image/Keyframe.mov" type="video/quicktime" />
@@ -37,12 +79,15 @@ const Banner = ({ data }) => {
       </div>
       <div className="relative ">
         <video
+          ref={(el) => (videoRefs.current[1] = el)}
           autoPlay
           loop
           muted
           playsInline
           controls={false}
           preload="auto"
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
           className={`r-transition absolute hover:scale-110 w-[90px] sm:w-[220px] md:w-[350px] 2xl:w-[374px] -left-[5%] sm:-left-[12%] lg:-left-5 xl:left-24 2xl:left-36 3xl:left-[13%] -top-[230px] sm:-top-[409px] md:-top-[450px] lg:-top-[295px]`}
         >
           <source src="/image/Star.mov" type="video/quicktime" />
@@ -51,12 +96,15 @@ const Banner = ({ data }) => {
       </div>
       <div className="relative ">
         <video
+          ref={(el) => (videoRefs.current[2] = el)}
           autoPlay
           loop
           muted
           playsInline
           controls={false}
           preload="auto"
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
           className={`r-transition brightness-90 absolute hover:scale-110 w-[110px] sm:w-[250px] md:w-[350px] lg:w-[450px] -right-[8%] sm:-right-[12%] lg:-right-[70px] xl:right-10 2xl:right-20 3xl:right-32 -top-[250px] sm:-top-[419px] md:-top-[470px] lg:-top-[325px]`}
         >
           <source src="/image/Monkeyvid2.mov" type="video/quicktime" />

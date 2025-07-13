@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import content from "@content/home.json";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
@@ -7,6 +7,7 @@ import { useCursorColor } from "@/app/context/CursorContext";
 
 const Services = ({ data }) => {
   const { setCursorColor } = useCursorColor();
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     setCursorColor("border-tcs-white"); // Change this to the desired color class
@@ -15,6 +16,43 @@ const Services = ({ data }) => {
       setCursorColor("border-tcs-banana"); // Reset to default on unmount
     };
   }, [setCursorColor]);
+
+  useEffect(() => {
+    // Force autoplay for Safari
+    const videos = videoRefs.current;
+    videos.forEach((video) => {
+      if (video) {
+        // Set muted and playsInline for Safari
+        video.muted = true;
+        video.playsInline = true;
+
+        // Try to play the video
+        const playPromise = video.play();
+
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              // Autoplay started successfully
+              console.log('Video autoplay started');
+            })
+            .catch((error) => {
+              // Autoplay was prevented, try again on user interaction
+              console.log('Autoplay prevented:', error);
+
+              const handleUserInteraction = () => {
+                video.play().catch(console.error);
+                document.removeEventListener('touchstart', handleUserInteraction);
+                document.removeEventListener('click', handleUserInteraction);
+              };
+
+              document.addEventListener('touchstart', handleUserInteraction);
+              document.addEventListener('click', handleUserInteraction);
+            });
+        }
+      }
+    });
+  }, []);
+
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -34,9 +72,8 @@ const Services = ({ data }) => {
         >
           <h3 className="text-tcs-pure-black bg-tcs-banana max-h-[120px] overflow-hidden text-left text-3xl lg:text-[40px] uppercase w-full sm:w-[90%] md:w-[70%] lg:w-full tracking-wide leading-tight">
             <span
-              className={` ${
-                sectionInView ? "animate-plateUp" : "top-96"
-              } relative bg-tcs-banana`}
+              className={` ${sectionInView ? "animate-plateUp" : "top-96"
+                } relative bg-tcs-banana`}
             >
               {data?.sectionTitleText}
             </span>
@@ -76,14 +113,20 @@ const Services = ({ data }) => {
       </div>
       <div className="hidden xl:block relative ">
         <video
+          ref={(el) => (videoRefs.current[0] = el)}
           autoPlay
           loop
           muted
+          playsInline
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
           loading="lazy"
           className="r-transition absolute hover:scale-110 size-[500px] right-10 rotate-6"
         >
           <source src="/image/Swiggle.mov" type="video/quicktime" />
-            <source src="/image/Swiggle.WEBM" type="video/webm" />
+          <source src="/image/Swiggle.webm" type="video/webm" />
         </video>
       </div>
       <>
@@ -113,14 +156,20 @@ const Services = ({ data }) => {
         </div>
         <div className="hidden xl:block relative ">
           <video
+            ref={(el) => (videoRefs.current[1] = el)}
             autoPlay
             loop
             muted
+            playsInline
+            controls={false}
+            preload="auto"
+            webkit-playsinline="true"
+            x-webkit-airplay="allow"
             loading="lazy"
             className="r-transition absolute hover:scale-110 size-56 left-36"
           >
             <source src="/image/Star2.mov" type="video/quicktime" />
-            <source src="/image/Star2.WEBM" type="video/webm" />
+            <source src="/image/Star2.webm" type="video/webm" />
           </video>
         </div>
         {/* Third Service */}
@@ -155,14 +204,20 @@ const Services = ({ data }) => {
         </div>
         <div className="hidden xl:block relative ">
           <video
+            ref={(el) => (videoRefs.current[2] = el)}
             autoPlay
             loop
             muted
+            playsInline
+            controls={false}
+            preload="auto"
+            webkit-playsinline="true"
+            x-webkit-airplay="allow"
             loading="lazy"
             className="r-transition absolute hover:scale-110 size-[260px] -top-5 right-0"
           >
             <source src="/image/Circle.mov" type="video/quicktime" />
-            <source src="/image/Circle.WEBM" type="video/webm" />
+            <source src="/image/Circle.webm" type="video/webm" />
           </video>
         </div>
         {/* Fourth Service */}
