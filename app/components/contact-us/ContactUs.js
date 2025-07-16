@@ -69,11 +69,14 @@ const ContactUs = () => {
             autoPlay
             loop
             muted
+            defaultMuted
             playsInline
             controls={false}
             preload="auto"
             webkit-playsinline="true"
             x-webkit-airplay="allow"
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
             className="size-full object-contain mx-auto"
           >
             <source src="/image/Banana.mov" type="video/quicktime" />

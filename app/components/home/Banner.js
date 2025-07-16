@@ -66,12 +66,15 @@ const Banner = ({ data }) => {
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           controls={false}
           preload="auto"
           webkit-playsinline="true"
           x-webkit-airplay="allow"
-          className={`r-transition z-30  absolute hover:scale-110 w-[60px] sm:w-[207px] right-[19%] sm:right-[35%] md:right-[39%] lg:right-[41%] 3xl:right-[44%] -top-[355px] sm:-top-[490px] lg:-top-[470px]`}
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+          className="r-transition z-30 absolute hover:scale-110 w-[60px] sm:w-[207px] right-[19%] sm:right-[35%] md:right-[39%] lg:right-[41%] 3xl:right-[44%] -top-[355px] sm:-top-[490px] lg:-top-[470px]"
         >
           <source src="/image/Keyframe.mov" type="video/quicktime" />
           <source src="/image/Keyframe.webm" type="video/webm" />
@@ -83,11 +86,14 @@ const Banner = ({ data }) => {
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           controls={false}
           preload="auto"
           webkit-playsinline="true"
           x-webkit-airplay="allow"
+           disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
           className={`r-transition absolute hover:scale-110 w-[90px] sm:w-[220px] md:w-[350px] 2xl:w-[374px] -left-[5%] sm:-left-[12%] lg:-left-5 xl:left-24 2xl:left-36 3xl:left-[13%] -top-[230px] sm:-top-[409px] md:-top-[450px] lg:-top-[295px]`}
         >
           <source src="/image/Star.mov" type="video/quicktime" />
@@ -100,11 +106,14 @@ const Banner = ({ data }) => {
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           controls={false}
           preload="auto"
           webkit-playsinline="true"
           x-webkit-airplay="allow"
+           disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
           className={`r-transition brightness-90 absolute hover:scale-110 w-[110px] sm:w-[250px] md:w-[350px] lg:w-[450px] -right-[8%] sm:-right-[12%] lg:-right-[70px] xl:right-10 2xl:right-20 3xl:right-32 -top-[250px] sm:-top-[419px] md:-top-[470px] lg:-top-[325px]`}
         >
           <source src="/image/Monkeyvid2.mov" type="video/quicktime" />

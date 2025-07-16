@@ -117,11 +117,14 @@ const Services = ({ data }) => {
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           controls={false}
           preload="auto"
           webkit-playsinline="true"
           x-webkit-airplay="allow"
+           disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
           loading="lazy"
           className="r-transition absolute hover:scale-110 size-[500px] right-10 rotate-6"
         >
@@ -160,11 +163,14 @@ const Services = ({ data }) => {
             autoPlay
             loop
             muted
+            defaultMuted
             playsInline
             controls={false}
             preload="auto"
             webkit-playsinline="true"
             x-webkit-airplay="allow"
+             disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
             loading="lazy"
             className="r-transition absolute hover:scale-110 size-56 left-36"
           >
@@ -208,11 +214,14 @@ const Services = ({ data }) => {
             autoPlay
             loop
             muted
+            defaultMuted
             playsInline
             controls={false}
             preload="auto"
             webkit-playsinline="true"
             x-webkit-airplay="allow"
+             disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
             loading="lazy"
             className="r-transition absolute hover:scale-110 size-[260px] -top-5 right-0"
           >

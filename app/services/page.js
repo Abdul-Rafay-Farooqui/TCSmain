@@ -39,11 +39,14 @@ const Service = () => {
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           controls={false}
           preload="auto"
           webkit-playsinline="true"
           x-webkit-airplay="allow"
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
           className="size-full object-contain"
         >
           <source src="/image/Smonkey.mov" type="video/quicktime" />
